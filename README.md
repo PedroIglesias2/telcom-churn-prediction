@@ -1,72 +1,38 @@
-# Project Name
+# Telcom company client churn prediction
 
-example image:
-
-
-![alternative text](reports/img/pic01.jpg)
+![alternative text](reports/img/churn.png)
 
 
-#### -- Project Status: [Active, On-Hold, Completed]
+#### -- Project Status: Completed
 
 ## Project Intro/Objective
-The purpose of this project is ________. (Describe the main goals of the project. Limit to a short paragraph, 3-6 Sentences)
+The purpose of this project was to apply learned data science and more specifically machine learning concepts to a problem of predicting which clients will churn.
 
-### Partner
-* [Name of Partner organization/Government department etc..]
-* Website for partner
-* Partner contact: [Name of Contact]
-* If you do not have a partner leave this section out
 
 ### Methods Used
-* Inferential Statistics
+
 * Machine Learning
 * Data Visualization
-* Predictive Modeling
-* etc.
 
 ### Technologies
-* R
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc.
+* Pandas, jupyter, sklearn, H20, FLAML,  Pycaret
+
 
 ## Project Description
-(Provide more detailed overview of the project.
-Talk a bit about your data sources and what questions and hypothesis you are exploring.
-What specific data analysis/visualization and modelling work are you using to solve the
-problem? What blockers and challenges are you facing?
-Feel free to number or bullet point things here)
+We obtained the kaggle dataset of clients of a telecommunication company (https://www.kaggle.com/datasets/blastchar/telco-customer-churn). The data consists of individual client's data with each row representing one client and a series of features(columns) and a dependant variable "Churn" which is either "yes" when the client churned in the time period of tha dataset or "no" otherwise.
 
-## Getting Started
+We cleaned and performed an initial exploratory analysis of the data, generating different visualizations to get an initial understanding of the data and problem. We coninued generating initial classifier models with Pycaret and H20 ML modules and contiued from there. We generated various models XGB, Logistic Regression with various hyperparameters. We tried out various feature engineering approaches, but were largely not that impactful. The biggest impact came from using a "class weights = balanced" or SMOTE resampling in order to balance the different classes in the dataset as there is a  ~75/25 split in no churn vs churn. We came to the business solution of having a two model approach. One model that identifies wih high probability all cases at the expense of having substantial false positives (Logistic regressor) and another model (GBM) to identifiy with a higher probability clients that would churn (i.e. low amount of false positives). This way the business can target with low cost methods (e.g. mass email) clients in the first bucket while having a more bespoke approach to the second bucket. 
 
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
 
-    *If using offline data mention that and how they may obtain the data from the froup)*
-
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages)
-create another "setup.md" file and link to it here*
-
-5. Follow setup [instructions](Link to file)
 
 ## Featured Notebooks/Analysis/Deliverables
-* [Notebook/Markdown/Slide Deck Title](link)
-* [Notebook/Markdown/Slide DeckTitle](link)
-* [Blog Post](link)
+* Business slides: reports/Telcom_Churn_Prediction.pdf
+* Various Jupyter Notebooks used in the notebooks folder
 
 
-## Contributing Members
-
-**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])**
-
-#### Other Members:
-
- - [Full Name](https://github.com/[github handle])
- - [Full Name](https://github.com/[github handle])
+## Team Members: 
+ - [Pedro](https://github.com/PedroIglesias2)
+ - [Sebastian](https://github.com/Sdrozo)
+ - [P](https://github.com/w011e)
+ - [Raphael](https://github.com/RP077)
