@@ -35,5 +35,5 @@ We cleaned and performed an initial exploratory analysis of the data, generating
 ## Team Members: 
  - [Pedro](https://github.com/PedroIglesias2)
  - [Sebastian](https://github.com/Sdrozo)
- - [P](https://github.com/w011e)
+ - [Paul](https://github.com/w011e)
  - [Raphael](https://github.com/RP077)
